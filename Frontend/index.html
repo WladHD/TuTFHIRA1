@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Pflegedokumentationsmodul</title>
+    <link rel="stylesheet" href="src/res/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/bundle.js"></script>
+</head>
+<body>
+<header>
+</header>
+
+<div class="patient-search-card">
+    <div class="patient-search">
+        <h2>Patient suchen</h2>
+        <form autocomplete="off">
+            <label>
+                <i class="fas fa-search"></i>
+                <input type="search" name="patient-search-input" id="patient-search-input" autocomplete="off">
+            </label>
+        </form>
+
+        <ul></ul>
+    </div>
+
+    <div class="patient-card">
+        <h2>Patientenakte</h2>
+        <div class="patient-card-header">
+            <div class="patient-image">
+                <i class="fas fa-user"></i>
+            </div>
+
+
+            <div class="patient-card-header-info">
+                <p class="patient-card-header-name-age-holder"><span
+                        class="patient-card-header-name">Mustermann, Max</span>
+                    (Alter
+                    <span class="patient-card-header-age">74</span>)</p>
+                <p class="patient-card-header-birthdate-holder">geb. <span class="patient-card-header-birthdate">03.11.2021</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="patient-card-select-selected">
+            <div class="patient-card-select">
+                <ul>
+                    <li><p>Notizen</p></li>
+                    <li><p>Barthel-Index</p></li>
+                </ul>
+            </div>
+
+            <div class="patient-card-selected">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

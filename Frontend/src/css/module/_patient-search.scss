@@ -1,0 +1,24 @@
+.patient-search {
+  form {
+    line-height: 3.2em;
+
+    input[type="search"] {
+      outline: none;
+      border: none;
+      padding: 0;
+    }
+
+    label, input[type="search"] {
+      font-size: 1.1em;
+    }
+
+    label {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}

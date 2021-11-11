@@ -1,0 +1,19 @@
+{
+  "name": "tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fhir": "^4.10.3",
+    "fhir-mongoose-schema-generator": "^1.0.13",
+    "fuzzysort": "^1.1.4",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  }
+}

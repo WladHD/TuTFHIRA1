@@ -1,0 +1,75 @@
+.patient-card {
+  .patient-card-header {
+    .patient-image {
+      display: inline-block;
+      $local-patient-image-width: 100px;
+      $local-patient-image-height: 130px;
+      width: $local-patient-image-width;
+      height: $local-patient-image-height;
+      background: $colorLightHighlight;
+      overflow: hidden;
+      border: $colorDarkHighlight 1px solid;
+
+      .far, .fas {
+        line-height: $local-patient-image-height;
+        font-size: $local-patient-image-width / 1.2;
+        width: $local-patient-image-width;
+        text-align: center;
+        color: $colorDarkHighlight;
+      }
+    }
+
+    .patient-card-header-info {
+      padding-left: 20px;
+      display: inline-block;
+      vertical-align: top;
+
+      .patient-card-header-name-age-holder {
+        font-size: 1.4em;
+
+        .patient-card-header-name {
+          font-weight: bold;
+        }
+      }
+
+      .patient-card-header-birthdate-holder {
+        padding-left: 20px;
+        color: $colorVeryDarkHighlight;
+      }
+    }
+  }
+
+  .patient-card-select-selected {
+    display: grid;
+    grid-template-columns: 120px 50px auto;
+    grid-template-rows: auto;
+
+    grid-template-areas:
+    "select . selected";
+
+    .patient-card-select {
+      grid-area: select;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 5px 0 5px 0;
+        }
+
+        li p {
+          background: $colorLightHighlight;
+          margin: 0;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .patient-card-selected {
+      grid-area: selected;
+    }
+  }
+
+}

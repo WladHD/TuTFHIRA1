@@ -1,0 +1,1 @@
+module.exports = (query, onReply) => require("./template/post")('http://localhost:3030/patient/get/name', { "query": query }, onReply);

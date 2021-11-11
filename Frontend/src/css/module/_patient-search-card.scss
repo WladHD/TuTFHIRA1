@@ -1,0 +1,17 @@
+.patient-search-card {
+  display: grid;
+  grid-template-columns: 300px 50px auto;
+  grid-template-rows: auto;
+  padding: 0 25px 0 25px;
+
+  grid-template-areas:
+    "search . card";
+
+  .patient-search {
+    grid-area: search;
+  }
+
+  .patient-card {
+    grid-area: card;
+  }
+}
