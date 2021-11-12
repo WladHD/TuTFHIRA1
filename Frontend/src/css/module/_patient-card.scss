@@ -69,6 +69,47 @@
 
     .patient-card-selected {
       grid-area: selected;
+
+      table {
+        tr {
+          th:nth-child(1) {
+            width: 200px;
+          }
+
+          th:nth-child(2) {
+            width: 600px;
+          }
+
+          th:nth-child(3) {
+            width: 100px;
+          }
+
+          td:nth-child(3n) {
+            text-align: center;
+          }
+        }
+
+        th, td {
+          border-bottom: 1px solid #ddd;
+          padding: 10px;
+
+          .far {
+            font-size: 1.3em;
+            margin: 5px;
+            cursor: pointer;
+          }
+
+          .far:hover {
+            opacity: 0.5;
+          }
+        }
+
+        textarea {
+          width: 100%;
+          outline: none;
+          resize: none;
+        }
+      }
     }
   }
 

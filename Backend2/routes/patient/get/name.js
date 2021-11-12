@@ -11,8 +11,8 @@ module.exports = async (req, res) => {
     )
 
     if (req.body.query === "")
-        req.body.query = " ";
-
+        return res.json(db.sort((a, b) => a.combinedOfficialName.localeCompare(b.combinedOfficialName)));
+        
     res.json(fuzzysort.go(
         req.body.query, db,
         {
@@ -24,6 +24,10 @@ module.exports = async (req, res) => {
         }
     )
     );
+
+
+
+
 }
 
 function parseName(fhir) {

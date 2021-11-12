@@ -5,12 +5,18 @@ module.exports = (fus) => {
     patientSearchList.empty();
 
     fus.forEach(patient => {
-        patientSearchList.append("<li><p><a href='#" + patient.obj.patientId + "'>" + patient.obj.combinedOfficialName + "</a></p></li>");
+        if(patient.obj)
+            patient = patient.obj;
+            
+        patientSearchList.append("<li><p><a href='#" + patient.patientId + "'>" + patient.combinedOfficialName + "</a></p></li>");
     });
 
     $(".patient-search ul li a").click((event) => {
         event.preventDefault();
+        const patId = event.target.href.split("#")[1];
 
-        require("../rest/getPatientById")(event.target.href.split("#")[1], (body) => require("../scenes/displayPatientCardById")(body.fhir));
+        $(".patient-card-selected tbody textarea").attr("name", patId);
+        require("../rest/getPatientById")(patId, (reply) => require("../scenes/displayPatientCardById")(reply.fhir));
+        require("../rest/getNotesByPatient")(patId, (reply) => require("../scenes/displayPatientNotes")(reply));
     });
 }

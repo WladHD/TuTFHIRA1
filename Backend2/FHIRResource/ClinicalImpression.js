@@ -54,7 +54,7 @@ module.exports = function() {
             default: void 0
         },
         date: {
-            type: Date,
+            type: String,
             default: void 0
         },
         assessor: {

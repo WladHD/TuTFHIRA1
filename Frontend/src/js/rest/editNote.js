@@ -1,0 +1,1 @@
+module.exports = (id, summary, onReply) => require("./template/post")('http://localhost:3030/clinicalimpression/edit', { id: id, summary: summary }, onReply);
