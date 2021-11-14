@@ -43,7 +43,7 @@ module.exports = function() {
             default: void 0
         },
         authored: {
-            type: Date,
+            type: String,
             default: void 0
         },
         author: {

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Attachment = require('./Attachment');
 const Coding = require('./Coding');
-const Quantity = require('./Quantity');
+//const Quantity = require('./Quantity');
 const Reference = require('./Reference');
 const QuestionnaireResponse_Item = require('./QuestionnaireResponse_Item');
 module.exports = new mongoose.Schema({
@@ -45,10 +45,10 @@ module.exports = new mongoose.Schema({
         type: Coding,
         default: void 0
     },
-    valueQuantity: {
+    /*valueQuantity: {
         type: Quantity,
         default: void 0
-    },
+    },*/
     valueReference: {
         type: Reference,
         default: void 0

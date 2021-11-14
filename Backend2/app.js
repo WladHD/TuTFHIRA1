@@ -19,6 +19,7 @@ app.use(function (req, res, next) {
 // ROUTES
 app.use('/patient', require('./routes/patient'));
 app.use('/clinicalimpression', require('./routes/clinicalimpression'));
+app.use('/questionnaireresponse', require('./routes/questionnaireresponse'));
 
 // DATABASE
 mongoose.connect('mongodb+srv://testuser:testpassword@tut.s5z2h.mongodb.net/TuT?retryWrites=true&w=majority', () => console.log("Database connected."));

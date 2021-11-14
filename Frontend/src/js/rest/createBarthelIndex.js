@@ -1,0 +1,1 @@
+module.exports = (values, onReply) => require("./template/post")('http://localhost:3030/questionnaireresponse/create', values, onReply);

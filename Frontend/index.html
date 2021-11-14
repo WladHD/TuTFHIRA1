@@ -51,28 +51,148 @@
             </div>
 
             <div class="patient-card-selected">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Datum</th>
-                        <th>Pflegenotiz</th>
-                        <th>Optionen</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Neue Pflegenotiz</td>
-                        <td><label>
-                            <textarea name="618d47e2ee0f54f3511518be"></textarea>
-                        </label></td>
-                        <td>
-                            <i class="far fa-save"></i>
-                        </td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    </tfoot>
-                </table>
+                <div class="patient-card-selected-notes hidden">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Pflegenotiz</th>
+                            <th>Optionen</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Neue Pflegenotiz</td>
+                            <td><label>
+                                <textarea name="618d47e2ee0f54f3511518be"></textarea>
+                            </label></td>
+                            <td>
+                                <i class="far fa-save"></i>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="patient-card-selected-barthel">
+                    <form>
+                        <label>
+                            <p>Essen und Trinken</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>Baden/Duschen</p>
+                            <select required>
+                                <option>5 - eigenständig</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>Körperpflege</p>
+                            <select required>
+                                <option>5 - eigenständig</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>An- und Ausziehen</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>Stuhlkontrolle</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Harnkontrolle</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Benutzung der Toilette</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Bett- /Stuhltransfer</p>
+                            <select required>
+                                <option>15 - eigenständig</option>
+                                <option>10 - Aufsicht oder geringe Hilfe</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Gehen/Fahren mit Rollstuhl</p>
+                            <select required>
+                                <option>15 - eigenständig</option>
+                                <option>10 - Aufsicht oder geringe Hilfe</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>Treppen steigen</p>
+                            <select required>
+                                <option>10 - eigenständig</option>
+                                <option>5 - nur mit Unterstützung</option>
+                                <option>0 - nicht möglich</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <p>Gesamtsumme</p>
+                            <input type="text" class="barthel-sum" value="100" disabled>
+                        </label>
+
+                        <label>
+                            <p>Aufnehmen</p>
+                            <input type="submit" value="Speichern">
+                        </label>
+                    </form>
+
+                    <table class="hidden">
+                        <thead>
+                        <tr>
+                            <th>Datum</th>
+                            <th>Barthel-Index</th>
+                            <th>Optionen</th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <td>10.12.2021</td>
+                            <td><a href="#234234">Summe: 95</a></td>
+                            <td></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
