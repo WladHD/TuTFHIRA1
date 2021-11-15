@@ -1,0 +1,1 @@
+module.exports = (id, onReply) => require("./template/post")('http://localhost:3030/questionnaireresponse/get/id', { "id": id }, onReply);
