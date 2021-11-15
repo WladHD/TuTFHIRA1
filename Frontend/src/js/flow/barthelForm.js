@@ -13,5 +13,26 @@ module.exports = {
         })
 
         form.find(".barthel-sum").val(sum);
+    },
+
+    resetForm: (form) => {
+        if (form === undefined)
+            form = $(".patient-card-selected-barthel form")
+            
+        $(form.find("select")).each((i, val) => {
+            const options = $($(val).find("option"))
+
+            for (let i = 0; i < options.length; i++)
+                $(options[i]).removeAttr('selected');
+
+            for (let i = 0; i < options.length; i++)
+                if (i === 0) {
+                    const opt = $(options[i]);
+                    opt.attr('selected', 'selected');
+                    opt.trigger('change')
+                }
+
+
+        })
     }
 }

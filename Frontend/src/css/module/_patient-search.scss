@@ -21,4 +21,14 @@
   ul {
     list-style: none;
   }
+
+  .fa-plus-square {
+    font-size: 1.5em;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  .fa-plus-square:hover {
+    opacity: 0.5;
+  }
 }

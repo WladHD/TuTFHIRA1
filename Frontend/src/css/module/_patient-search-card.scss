@@ -1,6 +1,6 @@
 .patient-search-card {
   display: grid;
-  grid-template-columns: 300px 50px auto;
+  grid-template-columns: 350px 50px auto;
   grid-template-rows: auto;
   padding: 0 25px 0 25px;
 
@@ -12,6 +12,10 @@
   }
 
   .patient-card {
+    grid-area: card;
+  }
+
+  .patient-new {
     grid-area: card;
   }
 }

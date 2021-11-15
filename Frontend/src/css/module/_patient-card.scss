@@ -1,4 +1,25 @@
 .patient-card {
+  .patient-card-options {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+
+        .far {
+          font-size: 1.5em;
+          margin: 0 5px 0 5px;
+          cursor: pointer;
+        }
+
+        .far:hover {
+          opacity: 0.5;
+        }
+
+      }
+    }
+  }
   .patient-card-header {
     .patient-image {
       display: inline-block;
@@ -32,7 +53,7 @@
         }
       }
 
-      .patient-card-header-birthdate-holder {
+      .patient-card-header-data-holder {
         padding-left: 20px;
         color: $colorVeryDarkHighlight;
       }
@@ -55,7 +76,8 @@
         padding: 0;
 
         li {
-          margin: 5px 0 5px 0;
+          margin: 10px 0 10px 0;
+          cursor: pointer;
         }
 
         li p {
@@ -112,6 +134,21 @@
       }
 
       .patient-card-selected-barthel {
+        .fa-redo {
+          margin-right: 10px;
+          font-size: 1.3em;
+          vertical-align: middle;
+          cursor: pointer;
+        }
+
+        .fa-redo:hover {
+          opacity: 0.5;
+        }
+
+        form {
+          margin-bottom: 50px;
+        }
+
         form select, form input, form p {
           display: inline-block;
         }
@@ -130,6 +167,14 @@
 
         form input[type="text"] {
           border: none!important;
+        }
+
+        form input[type="submit"] {
+          cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+          background-color: #d2d2d2;
         }
 
         form select option:nth-child(1), form select {

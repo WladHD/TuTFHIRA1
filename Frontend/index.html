@@ -19,13 +19,76 @@
                 <i class="fas fa-search"></i>
                 <input type="search" name="patient-search-input" id="patient-search-input" autocomplete="off">
             </label>
+
+            <i class="far fa-plus-square"></i>
         </form>
 
         <ul></ul>
     </div>
 
-    <div class="patient-card">
+
+    <div class="patient-new hidden">
+        <h2>Patientenakte <span class="patient-new-head"></span></h2>
+
+        <form autocomplete="off">
+            <label>
+                Geschlecht
+                <select required id="patient-gender">
+                    <option>Männlich</option>
+                    <option>Weiblich</option>
+                    <option>Andere</option>
+                </select>
+            </label>
+
+            <label>
+                Nachname
+                <input type="text" placeholder="Mustermann" required autocomplete="off" id="patient-family">
+            </label>
+
+            <label>
+                Vorname(n)
+                <input type="text" placeholder="Max; Peter; Hans" required autocomplete="off" id="patient-given">
+            </label>
+
+            <label>
+                Geburtsdatum
+                <input type="date" required autocomplete="off" id="patient-date">
+            </label>
+
+            <label>
+                Telefonnummer
+                <input type="tel" required autocomplete="off" placeholder="0231 91120" id="patient-tel">
+            </label>
+
+            <label>
+                Straße, Hausnummer
+                <input type="text" required autocomplete="off" placeholder="Sonnenstraße 96" id="patient-street">
+            </label>
+
+            <label>
+                Postleitzahl
+                <input type="number" required autocomplete="off" placeholder="44139" id="patient-pc">
+            </label>
+
+            <label>
+                Stadt
+                <input type="text" required autocomplete="off" placeholder="Dortmund" id="patient-city">
+            </label>
+
+            <label>
+                Land
+                <input type="text" required autocomplete="off" placeholder="Deutschland" id="patient-country">
+            </label>
+
+            <label>
+                <input type="submit" value="Patientenakte speichern">
+            </label>
+        </form>
+    </div>
+
+    <div class="patient-card hidden">
         <h2>Patientenakte</h2>
+
         <div class="patient-card-header">
             <div class="patient-image">
                 <i class="fas fa-user"></i>
@@ -33,11 +96,19 @@
 
 
             <div class="patient-card-header-info">
-                <p class="patient-card-header-name-age-holder"><span
-                        class="patient-card-header-name">Mustermann, Max</span>
+                <div class="patient-card-options">
+                    <ul>
+                        <li><i class="far fa-edit"></i></li>
+                        <li><i class="far fa-trash-alt"></i></li>
+                    </ul>
+                </div>
+
+                <p class="patient-card-header-name-age-holder"><span class="patient-card-header-gender"></span> <span class="patient-card-header-name"></span>
                     (Alter
-                    <span class="patient-card-header-age">74</span>)</p>
-                <p class="patient-card-header-birthdate-holder">geb. <span class="patient-card-header-birthdate">03.11.2021</span>
+                    <span class="patient-card-header-age"></span>)</p>
+                <p class="patient-card-header-data-holder">geb. <span class="patient-card-header-birthdate"></span>
+                <p class="patient-card-header-data-holder">Kontakt: <span class="patient-card-header-tel"></span>
+                <p class="patient-card-header-data-holder">Adresse: <span class="patient-card-header-address"></span>
                 </p>
             </div>
         </div>
@@ -76,7 +147,7 @@
                     </table>
                 </div>
 
-                <div class="patient-card-selected-barthel">
+                <div class="patient-card-selected-barthel hidden">
                     <form>
                         <label>
                             <p>Essen und Trinken</p>
@@ -165,7 +236,7 @@
                         </label>
 
                         <label>
-                            <p>Gesamtsumme</p>
+                            <p><i class="fas fa-redo"></i> Gesamtsumme</p>
                             <input type="text" class="barthel-sum" value="100" disabled>
                         </label>
 
@@ -175,7 +246,7 @@
                         </label>
                     </form>
 
-                    <table class="hidden">
+                    <table>
                         <thead>
                         <tr>
                             <th>Datum</th>
@@ -184,11 +255,6 @@
                         </tr>
                         </thead>
                         <tfoot>
-                        <tr>
-                            <td>10.12.2021</td>
-                            <td><a href="#234234">Summe: 95</a></td>
-                            <td></td>
-                        </tr>
                         </tfoot>
                     </table>
                 </div>

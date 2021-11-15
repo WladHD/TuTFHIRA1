@@ -2,14 +2,14 @@ const $ = require("jquery");
 const moment = require("moment");
 
 function displayPatientNotes(notes) {
-    const noteTable = $(".patient-card-selected table tfoot");
+    const noteTable = $(".patient-card-selected-notes table tfoot");
     noteTable.empty();
 
     notes.forEach(element => {
         noteTable.append("<tr><td>" + moment(element.fhir.date, "YYYY-MM-DDTHH:mm:ssZ").format("DD.MM.YYYY HH:mm:ss") + "</td><td class='summary-holder'>" + element.fhir.summary + "</td><td><i class='far fa-edit' id='edit#" + element.fhir.id + "'></i><i class='far fa-trash-alt' id='delete#" + element.fhir.id + "'></i></td></tr>");
     });
 
-    $(".patient-card-selected table tfoot .far").click(processOption)
+    $(".patient-card-selected-notes table tfoot .far").click(processOption)
 }
 
 function processOption(event) {

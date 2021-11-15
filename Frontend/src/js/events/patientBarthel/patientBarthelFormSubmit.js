@@ -19,12 +19,10 @@ module.exports = () => {
                 });
         })
 
-        const json = require("../../rest/template/QuestionnaireResponseJSON")($(".patient-card-selected tbody textarea").attr("name"), items);
+        const json = require("../../rest/template/QuestionnaireResponseJSON")(require("../../flow/currentPatient")(), items);
 
         require("../../rest/createBarthelIndex")(json, reply => {
-            console.log(reply)
-
-            // TODO refresh table
+            require("../../flow/loadBarthelIndex")();
         })
 
         return false;
