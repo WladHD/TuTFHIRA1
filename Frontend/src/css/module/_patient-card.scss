@@ -178,19 +178,19 @@
         }
 
         form select option:nth-child(1), form select {
-          background-color: rgba(0, 128, 0, 0.25);
+          background-color: rgba(0, 128, 0, 0.45);
         }
 
         form select option:nth-child(2) {
-          background-color: rgba(255, 255, 0, 0.25);
+          background-color: rgba(255, 255, 0, 0.45);
         }
 
         form select option:nth-child(3) {
-          background-color: rgba(255, 165, 0, 0.25);
+          background-color: rgba(255, 165, 0, 0.45);
         }
 
         form select option:nth-child(4), form select option:nth-last-child(1)  {
-          background-color: rgba(255, 0, 0, 0.25);
+          background-color: rgba(255, 0, 0, 0.45);
         }
 
         form label {

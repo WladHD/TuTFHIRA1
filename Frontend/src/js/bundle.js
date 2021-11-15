@@ -105498,7 +105498,8 @@ const nav = require("../flow/navigation");
 function displayPatientCard(fhir) {
     if (fhir === undefined)
         return alert("Patient nicht gefunden")
-        
+
+    $(".patient-card-selected tbody textarea").attr("name", fhir.id);
     $(".patient-card-header-name").text(parseName(fhir));
 
     const date = parseDate(fhir);
